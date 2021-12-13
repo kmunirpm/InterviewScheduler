@@ -4,7 +4,7 @@ import "components/InterviewerListItem.scss";
 
 export default function InterviewerListItem(props) {
   const styleClass = classNames("interviewers__item", {
-    "interviewers__item--selected": props.selected
+    "interviewers__item--selected": props.selected,
   });
   return (
     <li className={styleClass} onClick={props.setInterviewer}>
@@ -17,6 +17,5 @@ export default function InterviewerListItem(props) {
     </li>
   );
 }
-
 
 // previous version was: <li className={styleClass} onClick={() => props.setInterviewer(props.id)}>  due to props drilling we do not need id in this component
