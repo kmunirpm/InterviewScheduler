@@ -28,12 +28,12 @@ export function getInterview(state, interview) {
 export function getInterviewersForDay(state, dayName) {
   let retArr = [];
   if (state.days.length < 1) return [];
-  const dayAppointmentIDs = state.days.filter(
+  const dayInterviewers = state.days.filter(
     (currday) => currday.name === dayName
   );
-  if (dayAppointmentIDs.length < 1) return [];
+  if (dayInterviewers.length < 1) return [];
   Object.keys(state.interviewers).forEach((element) => {
-    if (dayAppointmentIDs[0].interviewers.includes(Number(element)))
+    if (dayInterviewers[0].interviewers.includes(Number(element)))
       retArr.push(state.interviewers[element]);
   });
   return retArr;
