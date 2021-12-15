@@ -7,14 +7,13 @@ export default function DayListItem(props) {
     "day-list__item--selected": props.selected,
     "day-list__item--full": props.spots < 1 ? true : false,
   });
-  console.log(props.value, props.selected);
   return (
     <li
       className={styleClass}
-      onClick={() => props.setDay(props.value)}
+      onClick={() => props.setDay(props.name)}
       selected={props.selected}
     >
-      <h2 className="text--regular">{props.value}</h2>
+      <h2 className="text--regular">{props.name}</h2>
       <h3 className="text--light">{formatSpots(props.spots)}</h3>
     </li>
   );
