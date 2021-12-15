@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-// Hook function passed to Appointment/index to update state for transitions
+//Hook function used Appointment/index to keep track of state transitions
 export default function useVisualMode(initial) {
   const [mode, setMode] = useState(initial);
   const [history, setHistory] = useState([]);
+  
   const transition = (newMode, replace = false) => {
     if (replace) {
       setHistory((prev) => [...prev]);
@@ -12,6 +13,7 @@ export default function useVisualMode(initial) {
     }
     setMode(newMode);
   };
+
   const back = () => {
     if (history.length < 1) return;
     setMode(history.pop());
