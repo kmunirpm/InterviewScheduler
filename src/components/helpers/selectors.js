@@ -1,6 +1,6 @@
 // gets all the all the appointments for the selected day "dayName" - returns array
 export function getAppointmentsForDay(state, dayName) {
-  let retarr = [];
+  let retArr = [];
   if (state.days.length < 1) return [];
   const dayAppointmentIDs = state.days.filter(
     (currday) => currday.name === dayName
@@ -8,9 +8,9 @@ export function getAppointmentsForDay(state, dayName) {
   if (dayAppointmentIDs.length < 1) return [];
   Object.keys(state.appointments).forEach((element) => {
     if (dayAppointmentIDs[0].appointments.includes(Number(element)))
-      retarr.push(state.appointments[element]);
+      retArr.push(state.appointments[element]);
   });
-  return retarr;
+  return retArr;
 }
 
 // gets info about the selected interview "interview" - returns an object with student & interviewer names
@@ -26,12 +26,15 @@ export function getInterview(state, interview) {
 
 //gets all the interviews for the selected day "dayName" - returns array
 export function getInterviewersForDay(state, dayName) {
-  const valDayNames = state.days.map(dayObj => dayObj.name);
-  if (!dayName || !valDayNames.includes(dayName)) return [];
-
-  const todayObj = state.days.filter(dayObj => dayObj.name === dayName)[0];
-  const interviewersObj = todayObj.interviewers.map(
-    interId => state.interviewers[interId]
+  let retArr = [];
+  if (state.days.length < 1) return [];
+  const dayAppointmentIDs = state.days.filter(
+    (currday) => currday.name === dayName
   );
-  return interviewersObj;
+  if (dayAppointmentIDs.length < 1) return [];
+  Object.keys(state.interviewers).forEach((element) => {
+    if (dayAppointmentIDs[0].interviewers.includes(Number(element)))
+      retArr.push(state.interviewers[element]);
+  });
+  return retArr;
 }
