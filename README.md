@@ -22,7 +22,7 @@ _Default view of the application when it first loads._
 
 ### New appointment booking
 !['Bookings View'](https://github.com/kmunirpm/InterviewScheduler/blob/master/blob/docs/book.png)
-_Booking a new interview for a student with an interviewer)._
+_Booking a new interview for a student with an interviewer._
 
 
 ### Appointment cancelation confirmation
