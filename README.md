@@ -16,22 +16,22 @@
 
 
 ### Application First view
-!['First View'](https://raw.githubusercontent.com/kmunirpm/blob/docs/default.png)
+!['First View'](https://github.com/kmunirpm/InterviewScheduler/blob/master/blob/docs/default.png)
 _Default view of the application when it first loads._
 
 
 ### New appointment booking
-!['Bookings View'](https://raw.githubusercontent.com/kmunirpm/blob/docs/book.png)
+!['Bookings View'](https://github.com/kmunirpm/InterviewScheduler/blob/master/blob/docs/book.png)
 _Booking a new interview for a student with an interviewer)._
 
 
 ### Appointment cancelation confirmation
-!['Delete confirmation'](https://raw.githubusercontent.com/kmunirpm/blob/docs/delete.png)
+!['Delete confirmation'](https://github.com/kmunirpm/InterviewScheduler/blob/master/blob/docs/delete.png)
 _A user can cancel an existing appointment by pressing delete icon and confirming on subsequent confirmation dialog._
 
 
 ### Appointment cancelation confirmation
-!['Error message'](https://raw.githubusercontent.com/kmunirpm/docs/error.png)
+!['Error message'](https://github.com/kmunirpm/InterviewScheduler/blob/master/blob/docs/error.png)
 _If something goes wrong it returns an error message._
 
 
