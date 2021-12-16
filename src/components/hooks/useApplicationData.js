@@ -8,40 +8,24 @@ import reducer, {
 
 // Function used to update state upon booking and cancelling an Interview
 export default function useApplicationData() {
-
   const [state, dispatch] = useReducer(reducer, {
     day: "Monday",
     days: [],
-    appointments: {},	
+    appointments: {},
     interviewers: {},
   });
   const setDay = (day) => dispatch({ type: SET_DAY, day: day });
 
   function bookInterview(id, interview) {
-    const appointment = {
-      ...state.appointments[id],
-      interview: { ...interview },
-    };
-
-    const appointments = {
-      ...state.appointments,
-      [id]: appointment,
-    };
-
-    dispatch({
-      type: SET_INTERVIEW,
-      id: id,
-      interview: interview,
+    return axios.put(`api/appointments/${id}`, { interview }).then(() => {
+      dispatch({ type: SET_INTERVIEW, id: id, interview: interview });
     });
-
-    return axios.put(`api/appointments/${id}`, { interview });
   }
 
   function cancelInterview(id) {
-    const delAppointment = { ...state.appointments[id], interview: null };
-    const appointments = { ...state.appointments, [id]: delAppointment };
-    dispatch({ type: SET_INTERVIEW, id: id, interview: null });
-    return axios.delete(`api/appointments/${id}`);
+    return axios.delete(`api/appointments/${id}`).then(() => {
+      dispatch({ type: SET_INTERVIEW, id: id, interview: null });
+    });
   }
 
   useEffect(() => {
