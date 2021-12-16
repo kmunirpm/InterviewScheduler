@@ -16,22 +16,22 @@
 
 
 ### Application First view
-!['default'](https://raw.githubusercontent.com/kmunirpm/docs/default.png)
+!['First View'](https://raw.githubusercontent.com/kmunirpm/blob/docs/default.png)
 _Default view of the application when it first loads._
 
 
 ### New appointment booking
-!['book'](https://raw.githubusercontent.com/kmunirpm//docs/book.png)
+!['Bookings View'](https://raw.githubusercontent.com/kmunirpm/blob/docs/book.png)
 _Booking a new interview for a student with an interviewer)._
 
 
 ### Appointment cancelation confirmation
-!['delete'](https://raw.githubusercontent.com/kmunirpm/docs/delete.png)
+!['Delete confirmation'](https://raw.githubusercontent.com/kmunirpm/blob/docs/delete.png)
 _A user can cancel an existing appointment by pressing delete icon and confirming on subsequent confirmation dialog._
 
 
 ### Appointment cancelation confirmation
-!['error'](https://raw.githubusercontent.com/kmunirpm/docs/error.png)
+!['Error message'](https://raw.githubusercontent.com/kmunirpm/docs/error.png)
 _If something goes wrong it returns an error message._
 
 
@@ -49,25 +49,20 @@ Download the project code by using the following command in terminal
 `git clone git@github.com:kmunirpm/InterviewScheduler.git <destination directory>`
 
 ## Installation
-```
-npm install
-```
+
+Navigate to `<destination directory>` and install all the dependencies by running `npm install` command
 
 ## Running Webpack Development Server
-```
-npm start
-```
+
+Once everything is installed and API server is running `npm install` command will load the app in browser
 
 ## Running Jest Test Framework
-```
-npm test
-```
 
-## Running Storybook Visual Testbed
-```
-npm run storybook
-```
+In order to run the test, navigate to `<destination directory>` and run `npm test` command
 
+## Running Storybook
+
+`npm run storybook` runs the storybook testing
 
 ## Project Stack
 
